@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        function countLetter(str)
+        {
+            let regExp = /a/gm;
+         return  str.match(regExp).length;
+        }
+        function splitString(str){
+            let regExp = /[a-zA-Z]+(?=\b)/gm;
+            return str.match(regExp);
+        }
+        function countWork (str){
+           return splitString(str).length;
+        }
+
+        var str = prompt("Insert String you want to work with");
+         document.write('The number of letter "a" in that string: '+  countLetter(str) + '<br>');
+        document.write('all words of that string: '+ splitString(str)+ '<br>');
+        document.write('number of word in that string: '+ countWork(str)+ '<br>');
+        document.write('string after replacing: '+ str.replace(/javascript/gi,"typescript"));
+
+
+
+
+</script>
+</body>
+</html>
